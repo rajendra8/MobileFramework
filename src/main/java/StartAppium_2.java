@@ -36,6 +36,7 @@ public class StartAppium_2 {
         caps.setCapability("deviceName", "IPhone 13");
         caps.setCapability("automationName", "XCUITest");
         caps.setCapability("browserName", "safari");
+
        // caps.setCapability("app", APP);
         driver = new IOSDriver(initiatDriver.startAppiumServer().getUrl(), caps);
     }

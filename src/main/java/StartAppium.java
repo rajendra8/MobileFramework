@@ -1,7 +1,6 @@
 import Util.Data;
 import Util.InitiatDriver;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.safari.SafariDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
@@ -16,9 +15,9 @@ import java.net.URL;
 
 public class StartAppium {
 
-    private static String APP = "/Users/raj_vodafone/IdeaProjects/JDMOBILE/App/app-jdsports-debug.apk";
+    private static String APP = "/Users/raj_vodafone/Downloads/app_jdsports_release_4.apk";
    private AndroidDriver driver =null;
-     SafariDriver S_driver;
+     //SafariDriver S_driver;
     InitiatDriver initiatDriver=new InitiatDriver();
    @Before
    public  void startAppiumServer() throws Exception{
@@ -34,8 +33,9 @@ public class StartAppium {
         caps.setCapability("udid", "emulator-5554");
         caps.setCapability("deviceName", "android");
         caps.setCapability("automationName", "UIAutomator2");
+      //  caps.setCapability("browserName", "Chrome");
         caps.setCapability("AppActivity", "com.jd.jdsports.ui.MainActivity");
-        caps.setCapability("AppPackage", "com.jd.jdsports.live");
+        caps.setCapability("AppPackage", "com.jd.jdsports.debug");
         caps.setCapability("app", APP);
         driver = new AndroidDriver(initiatDriver.startAppiumServer().getUrl(), caps);
     }

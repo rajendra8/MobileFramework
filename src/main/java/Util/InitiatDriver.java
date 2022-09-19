@@ -17,8 +17,8 @@ public class InitiatDriver {
         service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
                 .usingDriverExecutable(new File(data.readProperties().getProperty("NodeLocation")))
                 .withAppiumJS(new File(data.readProperties().getProperty("AppiumLocation")))
-                .withArgument(GeneralServerFlag.BASEPATH, "/wd/hub")
-                .usingPort(4724).withIPAddress("127.0.0.1"));
+                //.withArgument(GeneralServerFlag.BASEPATH, "/wd/hub")
+                .usingPort(4723).withIPAddress("127.0.0.1"));
       //  service.start();
         System.out.println(service.getUrl().toString());
         return service;

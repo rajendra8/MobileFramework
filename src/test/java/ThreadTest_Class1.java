@@ -8,7 +8,6 @@ public class ThreadTest_Class1 {
     StartAppium startAppium =new StartAppium();
     StartAppium_2 startAppium_2 = new StartAppium_2();
 
-
     public static void main(String[] args) {
         Thread thread1 = new Thread("startAppium");
         Thread thread2 = new Thread("startAppium_2");
